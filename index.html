@@ -109,7 +109,7 @@
             <img src="./Assets/images/president.png" alt="About Us Image" style="max-width: 100%; height: auto; border-bottom-right-radius: 3rem;">
           </div>
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">About Us</h2>
+            <h2 class="title" style="font-family: akaya kanadaka;">About Us</h2>
             <h5 class="description" style="word-spacing: 0.5ch; line-height:3ch; font-family: akaya kanadaka;">We are dedicated to spreading the hope found in biblical prophecy, seeking to share the gospel and promise of God's kingdom. Our work is inspired by the pursuit of eternal life, aiming to connect people with their faith and with each other. We strive to foster understanding of prophecy and its relevance to our lives, encouraging a deeper relationship with God and a stronger sense of community among believers. Our mission is to illuminate the path to hope through the wisdom of prophecy, guiding individuals towards a fulfilling and spiritually enriched life.</h5>
           </div>
         </div>
@@ -174,13 +174,31 @@
         </div>
     </div>
 
+    <!-- services -->
+    <div class="video-wrapper-container" style="position: relative;" id="services">
+      <h2 class="title" style="text-align: center; margin-bottom: 20px; font-family: akaya kanadaka;" >Watch Our Live Sermon</h2>
+       <div class="video-wrapper">
+       <div class="video-container">
+       <div class="promo-video-waves">
+       <div class="wave wave-1"></div>
+       <div class="wave wave-2"></div>
+       <div class="wave wave-3"></div>
+       </div>
+       <a href="https://www.youtube.com/watch?v=example" class="video-play-button video-popup mfp-iframe" style="text-decoration: none;">
+       <i class="fa fa-play"></i>
+       </a>
+       </div>
+       </div>
+      </div>
+   <!-- end services -->
+
 
     <!-- find a church near you, maps where user selects there location -->
     <div class="section section-find-a-church" id="findachurch" style="background-color: #f8f9fa; padding: 50px 0;">
         <div class="container">
          <div class="row">
            <div class="col-md-8 ml-auto mr-auto text-center">
-             <h2 class="title">Find a Church Near You</h2>
+             <h2 class="title" style="font-family: akaya kanadaka;">Find a Church Near You</h2>
               <label for="location" style="margin: 30px 0 20px;">Select your location:</label>
                 <select id="location" name="location" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-top: 10px; width: 200px; font-size: 16px;">
                 <option value="london">London</option>
@@ -245,7 +263,101 @@
 
     <!-- back to top -->
     <a href="#" class="back-to-top" style="position: fixed; bottom: 10px; right: 10px ; z-index: 99; font-size: 30px; color: #ec9901;"><i id="scroll-indicator" class="fa fa-chevron-up"></i></a>
-    
+    <!-- play icon -->
+
+
+    <!-- video container -->
+     <style>
+      
+     .video-wrapper-container {
+        position: relative; /* Add this line */
+        width: 100%; /* Adjust as needed */
+        height: 300px; /* Adjust as needed */
+     }
+
+     .video-wrapper {
+     display: inline-block;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%)
+     }
+
+     .video-container {
+     position: relative;
+     display: inline-block;
+     }
+
+     .video-play-button {
+     height: 50px;
+     width: 50px;
+     line-height: 50px;
+     text-align: center;
+     border-radius: 100%;
+     background: transparent;
+     color: #d90a0a;
+     display: inline-block;
+     background: #ffffff;
+     z-index: 999;
+     }
+
+     @keyframes waves {
+     0% {
+      -webkit-transform: scale(0.2, 0.2);
+      transform: scale(0.2, 0.2);
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+     }
+     50% {
+      opacity: 0.9;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+     }
+     100% {
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9);
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+     }
+     }
+
+     .fa-play:before {
+     content: "\f04b";
+     }
+
+     .wave {
+     position: absolute;
+     width: 150px;
+     height: 150px;
+     background: rgba(0, 0, 0, 0.3);
+     opacity: 0;
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+     border-radius: 100%;
+     right: -50px;
+     bottom: -50px;
+     z-index: -1;
+     -webkit-animation: waves 3s ease-in-out infinite;
+     animation: waves 3s ease-in-out infinite;
+     }
+      
+     .wave-1 {
+     -webkit-animation-delay: 0s;
+     animation-delay: 0s;
+     }
+
+     .wave-2 {
+     -webkit-animation-delay: 1s;
+     animation-delay: 1s;
+     }
+
+     .wave-3 {
+     -webkit-animation-delay: 2s;
+     animation-delay: 2s;
+     }
+     </style>
+   <!-- end of play -->
+
+
+
     <!-- floating button -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
@@ -280,6 +392,7 @@
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
+    
 
 
 
